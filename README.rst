@@ -36,7 +36,7 @@ Gunicorn requires **Python 3.x >= 3.5**.
 
 Install from PyPI::
 
-    $ pip install gunicorn
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn
 
 
 Usage

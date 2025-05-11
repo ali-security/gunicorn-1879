@@ -107,7 +107,7 @@ this::
     $ mkdir ~/venvs/
     $ virtualenv ~/venvs/webapp
     $ source ~/venvs/webapp/bin/activate
-    $ pip install gunicorn
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn
     $ deactivate
 
 Then you just need to use one of the three Gunicorn scripts that was installed
@@ -117,7 +117,7 @@ Note: You can force the installation of Gunicorn in your Virtualenv by
 passing ``-I`` or ``--ignore-installed`` option to pip::
 
      $ source ~/venvs/webapp/bin/activate
-     $ pip install -I gunicorn
+     $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' -I gunicorn
 
 Monitoring
 ==========

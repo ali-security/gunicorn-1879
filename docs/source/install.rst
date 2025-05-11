@@ -8,7 +8,7 @@ Installation
 
 To install the latest released version of Gunicorn::
 
-  $ pip install gunicorn
+  $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn
 
 From Source
 ===========
@@ -16,11 +16,11 @@ From Source
 You can install Gunicorn from source just as you would install any other
 Python package::
 
-    $ pip install git+https://github.com/benoitc/gunicorn.git
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' git+https://github.com/benoitc/gunicorn.git
 
 This will allow you to keep up to date with development on GitHub::
 
-    $ pip install -U git+https://github.com/benoitc/gunicorn.git
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' -U git+https://github.com/benoitc/gunicorn.git
 
 
 Async Workers
@@ -33,11 +33,11 @@ want to consider one of the alternate worker types.
 
 ::
 
-    $ pip install greenlet            # Required for both
-    $ pip install eventlet            # For eventlet workers
-    $ pip install gunicorn[eventlet]  # Or, using extra
-    $ pip install gevent              # For gevent workers
-    $ pip install gunicorn[gevent]    # Or, using extra
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' greenlet            # Required for both
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' eventlet            # For eventlet workers
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[eventlet]  # Or, using extra
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gevent              # For gevent workers
+    $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gevent]    # Or, using extra
 
 .. note::
     Both require ``greenlet``, which should get installed automatically.
@@ -72,7 +72,7 @@ setting will help distinguish between them in tools like ``ps`` and ``top``.
 * ``gunicorn[setproctitle]`` - Enables setting the process name
 
 Multiple extras can be combined, like
-``pip install gunicorn[gevent,setproctitle]``.
+``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gevent,setproctitle]``.
 
 Debian GNU/Linux
 ================

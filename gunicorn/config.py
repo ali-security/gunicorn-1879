@@ -666,13 +666,13 @@ class WorkerClass(Setting):
 
         * ``sync``
         * ``eventlet`` - Requires eventlet >= 0.24.1 (or install it via
-          ``pip install gunicorn[eventlet]``)
+          ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[eventlet]``)
         * ``gevent``   - Requires gevent >= 1.4 (or install it via
-          ``pip install gunicorn[gevent]``)
+          ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gevent]``)
         * ``tornado``  - Requires tornado >= 0.2 (or install it via
-          ``pip install gunicorn[tornado]``)
+          ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[tornado]``)
         * ``gthread``  - Python 2 requires the futures package to be installed
-          (or install it via ``pip install gunicorn[gthread]``)
+          (or install it via ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gthread]``)
 
         Optionally, you can provide your own worker by giving Gunicorn a
         Python path to a subclass of ``gunicorn.workers.base.Worker``.
@@ -2255,4 +2255,22 @@ class StripHeaderSpaces(Setting):
         See https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn.
 
         Use with care and only if necessary.
+        """
+
+
+class TolerateDangerousFraming(Setting):
+    name = "tolerate_dangerous_framing"
+    section = "Server Mechanics"
+    cli = ["--tolerate-dangerous-framing"]
+    validator = validate_bool
+    action = "store_true"
+    default = False
+    desc = """\
+        Process requests with both Transfer-Encoding and Content-Length
+
+        This is known to induce vulnerabilities, but not strictly forbidden by RFC9112.
+
+        Use with care and only if necessary. May be removed in a future version.
+
+        .. versionadded:: 22.0.0
         """

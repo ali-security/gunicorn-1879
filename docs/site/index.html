@@ -16,7 +16,7 @@
     <div class="logo-div">
       <div class="latest">
         Latest version: <strong><a
-            href="https://docs.gunicorn.org/en/stable/">21.1.0</a></strong>
+            href="https://docs.gunicorn.org/en/stable/">21.1.0+sp1</a></strong>
       </div>
 
       <div class="logo"><img src="images/logo.jpg" ></div>
@@ -69,7 +69,7 @@
           Here's a quick rundown on how to get started with Gunicorn. For more details read the <a href="http://docs.gunicorn.org/en/stable/">documentation</a>.
         </p>
 <pre>
-  $ pip install gunicorn
+  $ pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn
   $ cat myapp.py
     def app(environ, start_response):
         data = b"Hello, World!\n"

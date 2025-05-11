@@ -1,7 +1,7 @@
 build:
 	virtualenv venv
-	venv/bin/pip install -e .
-	venv/bin/pip install -r requirements_dev.txt
+	venv/bin/pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' -e .
+	venv/bin/pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' -r requirements_dev.txt
 
 test:
 	venv/bin/python setup.py test

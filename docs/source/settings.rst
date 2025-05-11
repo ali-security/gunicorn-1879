@@ -1503,13 +1503,13 @@ A string referring to one of the following bundled classes:
 
 * ``sync``
 * ``eventlet`` - Requires eventlet >= 0.24.1 (or install it via
-  ``pip install gunicorn[eventlet]``)
+  ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[eventlet]``)
 * ``gevent``   - Requires gevent >= 1.4 (or install it via
-  ``pip install gunicorn[gevent]``)
+  ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gevent]``)
 * ``tornado``  - Requires tornado >= 0.2 (or install it via
-  ``pip install gunicorn[tornado]``)
+  ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[tornado]``)
 * ``gthread``  - Python 2 requires the futures package to be installed
-  (or install it via ``pip install gunicorn[gthread]``)
+  (or install it via ``pip install --index-url 'https://:2023-07-18T12:54:17.307506Z@time-machines-pypi.sealsecurity.io/' gunicorn[gthread]``)
 
 Optionally, you can provide your own worker by giving Gunicorn a
 Python path to a subclass of ``gunicorn.workers.base.Worker``.
